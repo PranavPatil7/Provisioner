@@ -1,4 +1,4 @@
-# CSI provisioner
+# Provisioner – Production Grade Kubernetes CSI Provision                                                       
 
 The external-provisioner is a sidecar container that dynamically provisions volumes by calling `CreateVolume` and `DeleteVolume` functions of CSI drivers. It is necessary because internal persistent volume controller running in Kubernetes controller-manager does not have any direct interfaces to CSI drivers.
 
@@ -438,16 +438,3 @@ moved to phase "Lost". It has to be deleted and re-created if still
 needed because no new volume will be created for it. Editing the PVC
 to revert it to phase "Unbound" is not allowed by the Kubernetes
 API server.
-
-## Community, discussion, contribution, and support
-
-Learn how to engage with the Kubernetes community on the [community page](http://kubernetes.io/community/).
-
-You can reach the maintainers of this project at:
-
-- [Slack channel](https://kubernetes.slack.com/messages/sig-storage)
-- [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-storage)
-
-### Code of conduct
-
-Participation in the Kubernetes community is governed by the [Kubernetes Code of Conduct](code-of-conduct.md).
